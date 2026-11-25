@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Family Invitation</title>
+  <style>
+    :root {
+      --cream: #fff8ed;
+      --burgundy: #7b1e2b;
+      --gold: #c89b3c;
+      --ink: #35272a;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at top, rgba(200, 155, 60, 0.15), transparent 32rem),
+        var(--cream);
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .invitation {
+      width: min(680px, 100%);
+      min-height: 620px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid var(--gold);
+      outline: 8px solid rgba(200, 155, 60, 0.12);
+      outline-offset: 6px;
+      border-radius: 4px;
+      padding: 64px 48px;
+      text-align: center;
+      box-shadow: 0 20px 60px rgba(123, 30, 43, 0.12);
+      position: relative;
+    }
+
+    .invitation::before,
+    .invitation::after {
+      content: "◆";
+      display: block;
+      color: var(--gold);
+      letter-spacing: 12px;
+      margin: 0 auto;
+    }
+
+    .invitation::before { margin-bottom: 34px; }
+    .invitation::after { margin-top: 34px; }
+
+    h1 {
+      margin: 12px 0 8px;
+      color: var(--burgundy);
+      font-size: clamp(2.5rem, 8vw, 5rem);
+      line-height: 0.95;
+      font-weight: normal;
+    }
+
+    .ampersand {
+      color: var(--gold);
+      font-size: 0.55em;
+      vertical-align: middle;
+    }
+
+    .eyebrow {
+      margin: 0 0 24px;
+      color: var(--gold);
+      font-family: Arial, sans-serif;
+      font-size: 0.78rem;
+      font-weight: bold;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+    }
+
+    .message {
+      max-width: 480px;
+      margin: 28px auto;
+      font-size: 1.15rem;
+      line-height: 1.8;
+    }
+
+    .details {
+      display: inline-flex;
+      gap: 18px;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 18px 24px;
+      border-top: 1px solid rgba(200, 155, 60, 0.55);
+      border-bottom: 1px solid rgba(200, 155, 60, 0.55);
+      color: var(--burgundy);
+      font-size: 1.05rem;
+    }
+
+    .divider {
+      color: var(--gold);
+    }
+
+    footer {
+      margin-top: 24px;
+      font-style: italic;
+      color: #7b686b;
+    }
+
+    @media (max-width: 600px) {
+      .invitation { min-height: 560px; padding: 48px 24px; }
+      .details { display: grid; gap: 8px; }
+      .divider { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <main class="invitation">
+    <p class="eyebrow">Together with our families</p>
+    <h1>Amarjith <span class="ampersand">&amp;</span><br>Family</h1>
+    <p class="message">
+      Joyfully invite you to join us for a beautiful family celebration,
+      filled with love, laughter, and cherished memories.
+    </p>
+    <div class="details">
+      <span>Saturday, December 12</span>
+      <span class="divider">◆</span>
+      <span>6:00 PM</span>
+      <span class="divider">◆</span>
+      <span>Family Residence</span>
+    </div>
+    <footer>We look forward to celebrating with you.</footer>
+  </main>
+</body>
+</html>
